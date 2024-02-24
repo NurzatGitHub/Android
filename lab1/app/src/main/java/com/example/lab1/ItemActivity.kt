@@ -1,3 +1,4 @@
+
 package com.example.lab1
 
 import androidx.appcompat.app.AppCompatActivity
@@ -10,17 +11,26 @@ class ItemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item)
 
-        val image: ImageView = findViewById(R.id.item_list_image_1)
-        val title: TextView = findViewById(R.id.item_list_title_1)
-        val desc: TextView = findViewById(R.id.item_list_desc_1)
-        val text: TextView = findViewById(R.id.item_list_text_1)
-        val price: TextView = findViewById(R.id.item_list_price_1)
+        val image: ImageView = findViewById(R.id.item_list_image_2)
+        val title: TextView = findViewById(R.id.item_list_title_one)
+        val text: TextView = findViewById(R.id.item_list_text)
+        val button: TextView = findViewById(R.id.button_buy)
 
-
-//        image.text = intent.getStringExtra("imageTitle")
         title.text = intent.getStringExtra("itemTitle")
-        desc.text = intent.getStringExtra("itemDesc")
         text.text = intent.getStringExtra("itemText")
-        price.text = intent.getStringExtra("itemPrice")
+        button.text = intent.getStringExtra("itemButton")
+        val imageName = intent.getStringExtra("itemImage")
+
+        // Get the resource ID of the image dynamically
+        val imageId = resources.getIdentifier(imageName, "drawable", packageName)
+
+        // Set the image resource to the ImageView
+        if (imageId != 0) {
+            image.setImageResource(imageId)
+        } else {
+            // Set a default image if the resource is not found
+            image.setImageResource(R.drawable.wowkebab)
+        }
+
     }
 }

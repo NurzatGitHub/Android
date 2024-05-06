@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class Dogs(
     @SerializedName("name") val name: String,
     @SerializedName("image_link") val image_link: String,
-    @SerializedName("shedding") val shedding: Int,
-    @SerializedName("grooming") val grooming: Int,
-    @SerializedName("drooling") val drooling: Int,
+    @SerializedName("playfulness") val playfulness: Int,
+    @SerializedName("protectiveness") val protectiveness: Int,
+    @SerializedName("trainability") val trainability: Int,
 )
 

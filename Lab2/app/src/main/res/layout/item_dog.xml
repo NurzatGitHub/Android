@@ -26,7 +26,7 @@
         android:textColor="@color/black" />
 
     <TextView
-        android:id="@+id/text_view_dog_shedding"
+        android:id="@+id/text_view_dog_playfulness"
         android:textColor="@color/white"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
@@ -39,11 +39,11 @@
         android:textSize="12dp" />
 
     <TextView
-        android:id="@+id/text_view_dog_grooming"
+        android:id="@+id/text_view_dog_protectiveness"
         android:textColor="@color/white"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_view_dog_shedding"
+        android:layout_below="@id/text_view_dog_playfulness"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
@@ -52,11 +52,11 @@
         android:textSize="12dp" />
 
     <TextView
-        android:id="@+id/text_view_dog_drooling"
+        android:id="@+id/text_view_dog_trainability"
         android:textColor="@color/white"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_view_dog_grooming"
+        android:layout_below="@id/text_view_dog_protectiveness"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"

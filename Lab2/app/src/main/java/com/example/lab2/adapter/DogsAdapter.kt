@@ -17,15 +17,15 @@ class DogsAdapter : ListAdapter<Dogs, DogsAdapter.ViewHolder>(DogsDiffCallback()
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val dogNameTextView: TextView = itemView.findViewById(R.id.text_view_dog_name)
         private val dogImageView: ImageView = itemView.findViewById(R.id.image_view_dog)
-        private val dogsheddingView: TextView = itemView.findViewById(R.id.text_view_dog_shedding)
-        private val dogsgroomingView: TextView = itemView.findViewById(R.id.text_view_dog_grooming)
-        private val dogsdroolingView: TextView = itemView.findViewById(R.id.text_view_dog_drooling)
+        private val dogplayfulnessView: TextView = itemView.findViewById(R.id.text_view_dog_playfulness)
+        private val dogsgroomingprotectivenessView: TextView = itemView.findViewById(R.id.text_view_dog_protectiveness)
+        private val dogtrainabilityView: TextView = itemView.findViewById(R.id.text_view_dog_trainability)
 
         fun bind(dog: Dogs) {
             dogNameTextView.text = dog.name
-            dogsheddingView.text = "Shedding: ${dog.shedding}"
-            dogsgroomingView.text = "Grooming: ${dog.grooming}"
-            dogsdroolingView.text = "Drooling: ${dog.drooling}"
+            dogplayfulnessView.text = "Playfulness: ${dog.playfulness}"
+            dogsgroomingprotectivenessView.text = "Protectiveness: ${dog.protectiveness}"
+            dogtrainabilityView.text = "Trainability: ${dog.trainability}"
             Glide.with(itemView)
                 .load(dog.image_link)
                 .placeholder(R.drawable.kebabpizza)
